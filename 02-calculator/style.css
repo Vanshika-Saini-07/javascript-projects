@@ -1,0 +1,76 @@
+/* body = whole page */
+body{
+    background-color: pink;   /* gives full page pink background */
+
+    display: flex;            /* makes body a flex container so we can align items easily */
+
+    justify-content: center;  /* centers calculator horizontally */
+
+    align-items: center;      /* centers calculator vertically */
+
+    height: 100vh;            /* body takes full screen height */
+}
+
+
+/* main calculator box */
+#calculator{
+    height: 500px;            /* fixed height of calculator */
+
+    width: 400px;             /* fixed width */
+
+    border: black 3px solid;  /* visible border around calculator */
+
+    border-radius: 10px;      /* makes corners rounded */
+
+    background-color: white;  /* white background for clean look */
+
+    padding: 10px;            /* inner spacing so content doesn't touch edges */
+}
+
+
+/* calculator display/input screen */
+#display{
+    background-color: lightblue; /* screen color */
+
+    width: 100%;                 /* take full width of parent */
+
+    height: 100px;               /* large display area */
+
+    font-size: 24px;             /* bigger text so numbers are clearly visible */
+
+    text-align: right;           /* aligns numbers to right like real calculator */
+
+    border-radius: 10px;         /* rounded corners */
+
+    box-sizing: border-box;      /* keeps width calculation correct including padding/border */
+}
+
+
+/* container holding all buttons */
+#buttons{
+    display: grid;               /* grid layout for rows and columns */
+
+    grid-template-columns: repeat(4, 1fr);
+    /* makes 4 equal columns:
+       1fr = one fraction of available space */
+
+    gap: 10px;                   /* space between buttons */
+
+    padding: 5px;                /* little space inside buttons container */
+
+    margin-top: 20px;            /* gap between display and buttons */
+}
+
+
+/* styling every button */
+button{
+    height: 50px;                /* same height for all buttons */
+
+    border: none;                /* removes default ugly border */
+
+    border-radius: 10px;         /* rounded buttons */
+
+    font-size: 20px;             /* bigger text inside buttons */
+
+    cursor: pointer;             /* shows hand cursor on hover */
+}
