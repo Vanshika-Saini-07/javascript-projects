@@ -15,6 +15,11 @@ buttons.forEach(function(button){
          display.value=expression;
        }
         else if(value === "="){
+            let lastChar = expression[expression.length - 1];
+
+            if(operators.includes(lastChar)){
+                return;
+            }
             expression = eval(expression);
             display.value = expression;//Input elements store content in: .value property
         }
