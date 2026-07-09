@@ -1,0 +1,180 @@
+/* Removes the browser's default margin */
+body {
+    margin: 0;
+
+    /* Soft pastel pink background */
+    background-color: rgb(252, 194, 201);
+
+    /* Make body fill the whole screen */
+    height: 100vh;
+
+    /* Center the entire app */
+    display: flex;
+    justify-content: center;   /* Horizontal centering */
+    align-items: center;       /* Vertical centering */
+
+    /* Nice readable font */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main card */
+#container {
+    width: 450px;
+    height: 600px;
+
+    background-color: rgb(243, 247, 249);
+
+    /* Rounded corners */
+    border-radius: 15px;
+
+    /* Soft shadow instead of a thick border */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    /* Space inside the card */
+    padding: 20px;
+
+    /* Arrange children vertically */
+    display: flex;
+    flex-direction: column;
+
+    /* Center children horizontally */
+    align-items: center;
+
+    /* Include padding inside width and height */
+    box-sizing: border-box;
+}
+
+/* Title */
+h1 {
+    margin-top: 5px;
+    margin-bottom: 25px;
+
+    color: rgb(87, 87, 87);
+
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Input section */
+#input {
+    width: 100%;
+
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+/* Text input */
+#addtask {
+    /* Take all remaining horizontal space */
+    flex: 1;
+
+    height: 45px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 10px;
+
+    padding: 0 15px;
+
+    background-color: rgb(235, 225, 255);
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+}
+
+/* When user clicks inside the input */
+#addtask:focus {
+    box-shadow: 0 0 8px rgb(170, 140, 255);
+}
+
+/* Add button */
+#addtaskbtn {
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: rgb(255, 242, 170);
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+/* Mouse hover */
+#addtaskbtn:hover {
+    background-color: rgb(255, 228, 110);
+
+    transform: scale(1.03);
+}
+
+/* Task list */
+#tasklist {
+
+    /* Take all remaining vertical space */
+    flex: 1;
+
+    width: 100%;
+
+    padding: 0;
+
+    margin: 0;
+
+    list-style: none;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+/* One task */
+#tasklist li {
+
+    background-color: rgb(224, 250, 230);
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+/* Delete and edit buttons later */
+.task-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+/* Generic button styling */
+button {
+    font-size: 15px;
+}
+
+/* Nice scrolling */
+#tasklist::-webkit-scrollbar {
+    width: 8px;
+}
+
+#tasklist::-webkit-scrollbar-thumb {
+    background-color: rgb(212, 188, 255);
+
+    border-radius: 10px;
+}
